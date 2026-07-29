@@ -39,7 +39,7 @@ namespace Presentacion.View.Forms
         {
             InitializeComponent();
 
-            this.DoubleBuffered = true; //item
+            this.DoubleBuffered = true; 
             AsociarEventos();
             this.ActiveControl = lblInicio;
         }
