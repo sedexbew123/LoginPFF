@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnCerrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADjSURBVEhLtZVL
+        DsIwDERzunATukcqCzhqK9YUTsBq0IgaKZaT2JH6lrVnJp+2TimlBOAE4AHgDWDisxGoBfACsALI8pDm
+        H5RctbgHgFl50DOzwJVbzNqkhmEurCxySzW6IQ1z8pRza1EN6ZiTszRedEVxM8xjmogg0lvgEXp6tG+B
+        41xbVO+rwLFKi/bKNcGQmLngDBkzJ86Au9a5cJoLsZCgueALOfQ1dax8/EOLCCO9Y4KI5uDf9cSmIwfO
+        xgYOaIuuudAIWVjMxtB3mwtGyG/o70WGcCfbf8wNsN8nPRYx/wKBT0ByLYWbywAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="rtbPoliticas.Text" xml:space="preserve">
+    <value>
+
+Seguridad y Control de Acceso (Usuarios y Empleados)
+
+El uso de los módulos de Gestión de Empleados y Control de Credenciales se regirá bajo criterios estrictos de seguridad para prevenir fraudes, fugas o manipulación no autorizada de la información:
+
+• Política de Credenciales Únicas: Queda estrictamente prohibido compartir usuarios y contraseñas entre operadores. Cada empleado o administrador debe ingresar al sistema de forma exclusiva con su cuenta para garantizar que el registro de transacciones e historial de auditoría sea fidedigno e individualizado.
+• Caducidad y Fuerza de Contraseñas: Se establece la obligatoriedad de actualizar las contraseñas de acceso de forma periódica a través del módulo correspondiente. El sistema exigirá parámetros mínimos de longitud y complejidad para mitigar riesgos de vulneración por fuerza bruta.
+• Cierre de Sesión Obligatorio: Todo empleado tiene el deber de cerrar su sesión activa al ausentarse de su puesto de trabajo.
+
+Gestión de Clientes, Privacidad y Marco Legal
+
+La recopilación de datos de identidad, localización, contacto y registro fotográfico de clientes se fundamenta estrictamente en el marco legal vigente de la República Bolivariana de Venezuela:
+
+• Consentimiento de Registro Fotográfico y Biométrico: En cumplimiento con el Artículo 60 de la Constitución de la República Bolivariana de Venezuela (CRBV), que protege el derecho a la intimidad, la propia imagen y la vida privada, la captura o carga de fotografías se realizará bajo el consentimiento expreso del ciudadano. Las imágenes se utilizarán únicamente para fines de validación visual de identidad en el mostrador del comercio, prohibiéndose su extracción para fines ajenos al entorno operativo de CrediTrack.
+• Verificación de Identidad: Siendo la Cédula de Identidad el dato principal del registro, es norma obligatoria solicitar el documento físico antes de efectuar cualquier inscripción o modificación en el módulo Editar Clientes, mitigando el riesgo de suplantación de identidad.
+• Uso Limitado y Confidencialidad de Datos de Contacto: Con base en el Artículo 20 de la Ley Especial Contra los Delitos Informáticos (Violación de la Privacidad de la Información), los números telefónicos, direcciones y correos registrados son estrictamente confidenciales. Se prohíbe al personal exportar, enajenar o usar dicha información para mercadeo de terceros o beneficios particulares ajenos a la legítima gestión de cobranza del negocio.
+• Derecho de Actualización, Rectificación y Supresión (Habeas Data): Conforme al Artículo 28 de la CRBV, todo cliente goza del derecho de solicitar la corrección o eliminación de sus datos personales del sistema, restricción que podrá ejercer siempre y cuando no mantenga obligaciones financieras contractuales activas (créditos o saldos vencidos) con el establecimiento comercial.
+
+Normas Operativas de Crédito, Pagos y Fiscalidad
+
+Para salvaguardar la integridad financiera del negocio y cumplir con las normativas económicas vigentes:
+
+• Validación Legal de la Tasa del Día: De acuerdo con los lineamientos de la SUNDDE y el Convenio Cambiario N° 1 del Banco Central de Venezuela (BCV), es política obligatoria que el administrador actualice formalmente el módulo Tasa al inicio de cada jornada. Queda prohibido procesar créditos o abonos sin haber actualizado.
+• Amortización Inmediata de Saldos: Todo abono recibido debe registrarse en tiempo real en el módulo de Gestión de Pagos. Se prohíbe la acumulación de recibos físicos para su inserción diferida al cierre del día, evitando discrepancias en los balances y garantizando el cumplimiento de las declaraciones fiscales de transacciones en bolívares o divisas (IGTF / SENIAT).
+
+Control de Inventario y Prevención de Ilícitos Económicos
+
+La administración de las existencias físicas de mercancía en los almacenes se auditara estrictamente para prevenir inconsistencias y cumplir con la Ley Orgánica de Precios Justos:
+
+• Justificación de Descartes (Mermas): El módulo de Descargo no podrá ser utilizado de forma discrecional. Todo egreso que no corresponda a una venta (bajas por daño, vencimiento o pérdida) exige una nota justificativa obligatoria. 
+• Trazabilidad de Carga (Stock): Toda entrada de productos en el módulo de Cargo deberá estar respaldada formalmente por una factura de compra del proveedor o un documento de orden de producción interna.
+• Auditorías Cruzadas: Se establece como norma la ejecución mensual de un conteo físico de mercancía, el cual deberá confrontarse directamente con los datos arrojados por el módulo Detallado y los Informes del software, con el fin de detectar y sancionar fugas o pérdidas.
+
+Integridad del Sistema y Custodia Digital (Responsabilidad General)
+
+• Responsabilidad de Acción (No Repudio): Amparado en el Artículo 21 de la Ley Especial Contra los Delitos Informáticos (Acceso indebido u obtención de información), cada usuario es responsable legal, penal y administrativamente de las consultas o modificaciones que ejecute dentro del sistema bajo sus credenciales.
+• Resguardo y Copias de Seguridad: Las copias de seguridad de la base de datos (archivos de respaldo de SQL Server que contienen el historial de cuentas y datos privados) deben ser encriptadas y custodiadas en dispositivos locales o almacenes virtuales cifrados con acceso exclusivo del Administrador general, previniendo la exposición de datos ante fallas técnicas, daños o robo de hardware.</value>
+  </data>
+</root>

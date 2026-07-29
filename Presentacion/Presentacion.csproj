@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F40C8DCA-E1EB-430A-9D4A-C892179A8ED4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Presentacion</RootNamespace>
+    <AssemblyName>Presentacion</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+	  <Version>1.2.0.0</Version>
+	  <AssemblyVersion>1.2.0.0</AssemblyVersion>
+	  <FileVersion>1.2.0.0</FileVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoUpdater.NET, Version=1.9.3.0, Culture=neutral, PublicKeyToken=501435c91b35f4bc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autoupdater.NET.Official.1.9.3\lib\net462\AutoUpdater.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.6.2\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.105.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.105.0\lib\netstandard2.0\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML.Parser, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1d5f7376574c51ec, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.Parser.2.0.0\lib\netstandard2.0\ClosedXML.Parser.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=3.1.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.3.1.1\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml.Framework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.Framework.3.1.1\lib\net46\DocumentFormat.OpenXml.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.5, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.5\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton.Toolkit, Version=70.22.11.312, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Krypton.Toolkit.70.22.11.312\lib\net472\Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.4078.44, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.4078.44\lib\net462\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.4078.44, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.4078.44\lib\net462\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.4078.44, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.4078.44\lib\net462\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="RBush, Version=4.0.0.0, Culture=neutral, PublicKeyToken=c77e27b81f4d0187, processorArchitecture=MSIL">
+      <HintPath>..\packages\RBush.Signed.4.0.0\lib\net47\RBush.dll</HintPath>
+    </Reference>
+    <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>..\packages\SixLabors.Fonts.1.0.0\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.6.1\lib\net462\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Memory, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.6.3\lib\net462\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.6.1\lib\net462\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.1.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helpers\AnimateWindows.cs" />
+    <Compile Include="Helpers\ControlAcceso.cs" />
+    <Compile Include="Helpers\MoveForm.cs" />
+    <Compile Include="Helpers\NewButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helpers\NewComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Helpers\NewTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Helpers\WhatsAppHelper.cs" />
+    <Compile Include="Presenter\AdministrarPermisosPresenter.cs" />
+    <Compile Include="Presenter\AgregarDeudaPresenter.cs" />
+    <Compile Include="Presenter\AsignarCreditoPresenter.cs" />
+    <Compile Include="Presenter\CambiarContraseñaPresenter.cs" />
+    <Compile Include="Presenter\CambioMonedaPresenter.cs" />
+    <Compile Include="Presenter\CapturaFotoClientesPresenter.cs" />
+    <Compile Include="Presenter\CapturaFotoPresenter.cs" />
+    <Compile Include="Presenter\CargoProductoPresenter.cs" />
+    <Compile Include="Presenter\CategoriaPresenter.cs" />
+    <Compile Include="Presenter\ConfiguracionServiciosPresenter.cs" />
+    <Compile Include="Presenter\ConsultaDeudaPresenter.cs" />
+    <Compile Include="Presenter\ControlTrabajoPresenter.cs" />
+    <Compile Include="Presenter\DatosConsultaDeudaPresenter.cs" />
+    <Compile Include="Presenter\DescargoProductoPresenter.cs" />
+    <Compile Include="Presenter\EditarClientesPresenter.cs" />
+    <Compile Include="Presenter\GestionEmpleadosPresenter.cs" />
+    <Compile Include="Presenter\InformacionUsuarioPresenter.cs" />
+    <Compile Include="Presenter\InformesPresenter.cs" />
+    <Compile Include="Presenter\ListadoClientesPresenter.cs" />
+    <Compile Include="Presenter\ListadoPagosPresenter.cs" />
+    <Compile Include="Presenter\LoginPresenter.cs" />
+    <Compile Include="Presenter\MenuPrincipalPresenter.cs" />
+    <Compile Include="Presenter\NuevoEmpleadoPresenter.cs" />
+    <Compile Include="Presenter\NuevoProductoPresenter.cs" />
+    <Compile Include="Presenter\NuevoServicioPresenter.cs" />
+    <Compile Include="Presenter\PagarPresenter.cs" />
+    <Compile Include="Presenter\PagosPresenter.cs" />
+    <Compile Include="Presenter\ProductosDetalladosPresenter.cs" />
+    <Compile Include="Presenter\RecuperarContraseñaPresenter.cs" />
+    <Compile Include="Presenter\RecuperarUsuarioPresenter.cs" />
+    <Compile Include="Presenter\RegistroClientesPresenter.cs" />
+    <Compile Include="Presenter\RegistroProductoPresenter.cs" />
+    <Compile Include="Presenter\RegistroUsuarioPresenter.cs" />
+    <Compile Include="Presenter\TasaDolarPresenter.cs" />
+    <Compile Include="Presenter\TokenContraseñaPresenter.cs" />
+    <Compile Include="Presenter\TokenUsuarioPresenter.cs" />
+    <Compile Include="Presenter\VisualizarClientesPresenter.cs" />
+    <Compile Include="Presenter\VisualizarEmpleadosPresenter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Forms\AdministrarPermisos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\AdministrarPermisos.Designer.cs">
+      <DependentUpon>AdministrarPermisos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\AgregarDeuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\AgregarDeuda.Designer.cs">
+      <DependentUpon>AgregarDeuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\CambiarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\CambiarContraseña.Designer.cs">
+      <DependentUpon>CambiarContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\CambioMoneda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\CambioMoneda.Designer.cs">
+      <DependentUpon>CambioMoneda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\CapturaFoto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\CapturaFoto.Designer.cs">
+      <DependentUpon>CapturaFoto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\CapturaFotoClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\CapturaFotoClientes.Designer.cs">
+      <DependentUpon>CapturaFotoClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\DatosConsultaDeuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\DatosConsultaDeuda.Designer.cs">
+      <DependentUpon>DatosConsultaDeuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\EditarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\EditarClientes.Designer.cs">
+      <DependentUpon>EditarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\NuevoEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\NuevoEmpleado.Designer.cs">
+      <DependentUpon>NuevoEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\NuevoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\NuevoProducto.Designer.cs">
+      <DependentUpon>NuevoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\NuevoServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\NuevoServicio.Designer.cs">
+      <DependentUpon>NuevoServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Pagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Pagar.Designer.cs">
+      <DependentUpon>Pagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Politicas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Politicas.Designer.cs">
+      <DependentUpon>Politicas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\RecuperarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\RecuperarContraseña.Designer.cs">
+      <DependentUpon>RecuperarContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\RecuperarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\RecuperarUsuario.Designer.cs">
+      <DependentUpon>RecuperarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\RegistroUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\RegistroUsuario.Designer.cs">
+      <DependentUpon>RegistroUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\TokenContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\TokenContraseña.Designer.cs">
+      <DependentUpon>TokenContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\TokenUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\TokenUsuario.Designer.cs">
+      <DependentUpon>TokenUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\VisualizarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\VisualizarClientes.Designer.cs">
+      <DependentUpon>VisualizarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\VisualizarEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\VisualizarEmpleados.Designer.cs">
+      <DependentUpon>VisualizarEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Interfaces\ICapturaFotoClientesView.cs" />
+    <Compile Include="View\Interfaces\IAdministrarPermisosView.cs" />
+    <Compile Include="View\Interfaces\IAgregarDeudaView.cs" />
+    <Compile Include="View\Interfaces\IAsignarCreditoView.cs" />
+    <Compile Include="View\Interfaces\ICambiarContraseñaView.cs" />
+    <Compile Include="View\Interfaces\ICambioMonedaView.cs" />
+    <Compile Include="View\Interfaces\ICapturaFotoView.cs" />
+    <Compile Include="View\Interfaces\ICargoProductoView.cs" />
+    <Compile Include="View\Interfaces\ICategoriaView.cs" />
+    <Compile Include="View\Interfaces\IConfiguracionServiciosView.cs" />
+    <Compile Include="View\Interfaces\IConsultaDeudaView.cs" />
+    <Compile Include="View\Interfaces\IControlTrabajoView.cs" />
+    <Compile Include="View\Interfaces\IDatosConsultaDeudaView.cs" />
+    <Compile Include="View\Interfaces\IDescargoProductoView.cs" />
+    <Compile Include="View\Interfaces\IEditarClientesView.cs" />
+    <Compile Include="View\Interfaces\IGestionEmpleadosView.cs" />
+    <Compile Include="View\Interfaces\IInformacionUsuarioView.cs" />
+    <Compile Include="View\Interfaces\IInformesView.cs" />
+    <Compile Include="View\Interfaces\IListadoClientesView.cs" />
+    <Compile Include="View\Interfaces\IListadoPagosView.cs" />
+    <Compile Include="View\Interfaces\ILoginView.cs" />
+    <Compile Include="View\Interfaces\IMenuPrincipalView.cs" />
+    <Compile Include="View\Interfaces\INuevoEmpleadoView.cs" />
+    <Compile Include="View\Interfaces\INuevoProductoView.cs" />
+    <Compile Include="View\Interfaces\INuevoServicioView.cs" />
+    <Compile Include="View\Interfaces\IPagarView.cs" />
+    <Compile Include="View\Interfaces\IPagosView.cs" />
+    <Compile Include="View\Interfaces\IProductosDetalladosView.cs" />
+    <Compile Include="View\Interfaces\IRecuperarContraseñaView.cs" />
+    <Compile Include="View\Interfaces\IRecuperarUsuarioView.cs" />
+    <Compile Include="View\Interfaces\IRegistroClientesView.cs" />
+    <Compile Include="View\Interfaces\IRegistroProductoView.cs" />
+    <Compile Include="View\Interfaces\IRegistroUsuarioView.cs" />
+    <Compile Include="View\Interfaces\ITasaDolarView.cs" />
+    <Compile Include="View\Interfaces\ITokenContraseñaView.cs" />
+    <Compile Include="View\Interfaces\ITokenUsuarioView.cs" />
+    <Compile Include="View\Interfaces\IVisualizacionEmpleadosView.cs" />
+    <Compile Include="View\Interfaces\IVisualizarClientesView.cs" />
+    <Compile Include="View\UserControls\AcercaDeDEF.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\AcercaDeDEF.Designer.cs">
+      <DependentUpon>AcercaDeDEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\AsignarCredito.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\AsignarCredito.Designer.cs">
+      <DependentUpon>AsignarCredito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\CargoProductos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\CargoProductos.Designer.cs">
+      <DependentUpon>CargoProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Categoria.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Categoria.Designer.cs">
+      <DependentUpon>Categoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\ConfiguracionServicio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\ConfiguracionServicio.Designer.cs">
+      <DependentUpon>ConfiguracionServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\ControlTrabajo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\ControlTrabajo.Designer.cs">
+      <DependentUpon>ControlTrabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\DescargoProductos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\DescargoProductos.Designer.cs">
+      <DependentUpon>DescargoProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\GestionEmpleados.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\GestionEmpleados.Designer.cs">
+      <DependentUpon>GestionEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\InformacionUsuario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\InformacionUsuario.Designer.cs">
+      <DependentUpon>InformacionUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Informes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Informes.Designer.cs">
+      <DependentUpon>Informes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Inicio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Inicio.Designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\ConsultaDeuda.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\ConsultaDeuda.Designer.cs">
+      <DependentUpon>ConsultaDeuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\ListadoClientes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\ListadoClientes.Designer.cs">
+      <DependentUpon>ListadoClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\ListadoPagos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\ListadoPagos.Designer.cs">
+      <DependentUpon>ListadoPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Pagos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Pagos.Designer.cs">
+      <DependentUpon>Pagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\ProductosDetallados.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\ProductosDetallados.Designer.cs">
+      <DependentUpon>ProductosDetallados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\RegistroClientes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\RegistroClientes.Designer.cs">
+      <DependentUpon>RegistroClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\RegistroProductos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\RegistroProductos.Designer.cs">
+      <DependentUpon>RegistroProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\TasaDolar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\TasaDolar.Designer.cs">
+      <DependentUpon>TasaDolar.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View\Forms\AdministrarPermisos.resx">
+      <DependentUpon>AdministrarPermisos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\AgregarDeuda.resx">
+      <DependentUpon>AgregarDeuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\CambiarContraseña.resx">
+      <DependentUpon>CambiarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\CambioMoneda.resx">
+      <DependentUpon>CambioMoneda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\CapturaFoto.resx">
+      <DependentUpon>CapturaFoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\DatosConsultaDeuda.resx">
+      <DependentUpon>DatosConsultaDeuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\EditarClientes.resx">
+      <DependentUpon>EditarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\NuevoEmpleado.resx">
+      <DependentUpon>NuevoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\NuevoProducto.resx">
+      <DependentUpon>NuevoProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\NuevoServicio.resx">
+      <DependentUpon>NuevoServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Pagar.resx">
+      <DependentUpon>Pagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Politicas.resx">
+      <DependentUpon>Politicas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\RecuperarContraseña.resx">
+      <DependentUpon>RecuperarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\RecuperarUsuario.resx">
+      <DependentUpon>RecuperarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\RegistroUsuario.resx">
+      <DependentUpon>RegistroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\TokenContraseña.resx">
+      <DependentUpon>TokenContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\TokenUsuario.resx">
+      <DependentUpon>TokenUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\VisualizarClientes.resx">
+      <DependentUpon>VisualizarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\VisualizarEmpleados.resx">
+      <DependentUpon>VisualizarEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\AcercaDeDEF.resx">
+      <DependentUpon>AcercaDeDEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\AsignarCredito.resx">
+      <DependentUpon>AsignarCredito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\CargoProductos.resx">
+      <DependentUpon>CargoProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Categoria.resx">
+      <DependentUpon>Categoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\ConfiguracionServicio.resx">
+      <DependentUpon>ConfiguracionServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\ControlTrabajo.resx">
+      <DependentUpon>ControlTrabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\DescargoProductos.resx">
+      <DependentUpon>DescargoProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\GestionEmpleados.resx">
+      <DependentUpon>GestionEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\InformacionUsuario.resx">
+      <DependentUpon>InformacionUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Informes.resx">
+      <DependentUpon>Informes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Inicio.resx">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\ConsultaDeuda.resx">
+      <DependentUpon>ConsultaDeuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\ListadoClientes.resx">
+      <DependentUpon>ListadoClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\ListadoPagos.resx">
+      <DependentUpon>ListadoPagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Pagos.resx">
+      <DependentUpon>Pagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\ProductosDetallados.resx">
+      <DependentUpon>ProductosDetallados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\RegistroClientes.resx">
+      <DependentUpon>RegistroClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\RegistroProductos.resx">
+      <DependentUpon>RegistroProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\TasaDolar.resx">
+      <DependentUpon>TasaDolar.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="appSettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{d24758df-4c54-440f-af2c-121a562b9e66}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logica\Logica.csproj">
+      <Project>{2d4bf5b2-e2db-4005-8d13-1349d37136b2}</Project>
+      <Name>Logica</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo V1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_00000000f28071fd801321a92b220cf8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_00000000b14c71f88bb54f005246e1901.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cuenta-de-prueba-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-candado-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-x-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-x-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-x-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-x-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-x-161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cuenta-de-prueba-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-candado-301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portapapeles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logo V1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Update.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Web.WebView2.1.0.4078.44\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.4078.44\build\Microsoft.Web.WebView2.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Web.WebView2.1.0.4078.44\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Web.WebView2.1.0.4078.44\build\Microsoft.Web.WebView2.targets'))" />
+  </Target>
+</Project>
