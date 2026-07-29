@@ -441,7 +441,7 @@
             this.tlpHerramientas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.42406F));
             this.tlpHerramientas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.863904F));
             this.tlpHerramientas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.42406F));
-            this.tlpHerramientas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 69F));
+            this.tlpHerramientas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 71F));
             this.tlpHerramientas.Controls.Add(this.lblVisual, 5, 2);
             this.tlpHerramientas.Controls.Add(this.lblCSharp, 3, 2);
             this.tlpHerramientas.Controls.Add(this.lblSQL, 1, 2);
@@ -466,10 +466,10 @@
             // 
             this.lblVisual.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblVisual.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblVisual.Location = new System.Drawing.Point(343, 128);
+            this.lblVisual.Location = new System.Drawing.Point(341, 128);
             this.lblVisual.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVisual.Name = "lblVisual";
-            this.lblVisual.Size = new System.Drawing.Size(136, 21);
+            this.lblVisual.Size = new System.Drawing.Size(135, 21);
             this.lblVisual.TabIndex = 19;
             this.lblVisual.Text = "Visual Studio";
             this.lblVisual.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -478,10 +478,10 @@
             // 
             this.lblCSharp.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblCSharp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblCSharp.Location = new System.Drawing.Point(176, 128);
+            this.lblCSharp.Location = new System.Drawing.Point(175, 128);
             this.lblCSharp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCSharp.Name = "lblCSharp";
-            this.lblCSharp.Size = new System.Drawing.Size(136, 21);
+            this.lblCSharp.Size = new System.Drawing.Size(135, 21);
             this.lblCSharp.TabIndex = 17;
             this.lblCSharp.Text = "CSharp";
             this.lblCSharp.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -493,7 +493,7 @@
             this.lblSQL.Location = new System.Drawing.Point(9, 128);
             this.lblSQL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSQL.Name = "lblSQL";
-            this.lblSQL.Size = new System.Drawing.Size(136, 21);
+            this.lblSQL.Size = new System.Drawing.Size(135, 21);
             this.lblSQL.TabIndex = 15;
             this.lblSQL.Text = "SQL Server";
             this.lblSQL.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -536,10 +536,10 @@
             this.picVisual.BackColor = System.Drawing.Color.Transparent;
             this.picVisual.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picVisual.Image = ((System.Drawing.Image)(resources.GetObject("picVisual.Image")));
-            this.picVisual.Location = new System.Drawing.Point(343, 14);
+            this.picVisual.Location = new System.Drawing.Point(341, 14);
             this.picVisual.Margin = new System.Windows.Forms.Padding(2);
             this.picVisual.Name = "picVisual";
-            this.picVisual.Size = new System.Drawing.Size(136, 112);
+            this.picVisual.Size = new System.Drawing.Size(135, 112);
             this.picVisual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picVisual.TabIndex = 2;
             this.picVisual.TabStop = false;
@@ -552,7 +552,7 @@
             this.picSQL.Location = new System.Drawing.Point(9, 14);
             this.picSQL.Margin = new System.Windows.Forms.Padding(2);
             this.picSQL.Name = "picSQL";
-            this.picSQL.Size = new System.Drawing.Size(136, 112);
+            this.picSQL.Size = new System.Drawing.Size(135, 112);
             this.picSQL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picSQL.TabIndex = 1;
             this.picSQL.TabStop = false;
@@ -562,10 +562,10 @@
             this.picC.BackColor = System.Drawing.Color.Transparent;
             this.picC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picC.Image = ((System.Drawing.Image)(resources.GetObject("picC.Image")));
-            this.picC.Location = new System.Drawing.Point(176, 14);
+            this.picC.Location = new System.Drawing.Point(175, 14);
             this.picC.Margin = new System.Windows.Forms.Padding(2);
             this.picC.Name = "picC";
-            this.picC.Size = new System.Drawing.Size(136, 112);
+            this.picC.Size = new System.Drawing.Size(135, 112);
             this.picC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picC.TabIndex = 0;
             this.picC.TabStop = false;
