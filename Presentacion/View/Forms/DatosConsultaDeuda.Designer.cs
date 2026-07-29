@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DatosConsultaDeuda));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.lblDatosDeuda = new System.Windows.Forms.Label();
@@ -50,8 +50,6 @@
             this.lblMeses = new System.Windows.Forms.Label();
             this.lblMostrarMeses = new System.Windows.Forms.Label();
             this.pnlInformacion = new System.Windows.Forms.Panel();
-            this.pnlCarga = new System.Windows.Forms.Panel();
-            this.picCarga = new System.Windows.Forms.PictureBox();
             this.lblCedula = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblNombreMostrar = new System.Windows.Forms.Label();
@@ -60,6 +58,8 @@
             this.lblMonto = new System.Windows.Forms.Label();
             this.lblCreditoMostrar = new System.Windows.Forms.Label();
             this.lblCedulaMostrar = new System.Windows.Forms.Label();
+            this.pnlCarga = new System.Windows.Forms.Panel();
+            this.picCarga = new System.Windows.Forms.PictureBox();
             this.pnlSuperior.SuspendLayout();
             this.pnlContenedorDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVDatos)).BeginInit();
@@ -127,14 +127,14 @@
             this.dGVDatos.BackgroundColor = System.Drawing.Color.White;
             this.dGVDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dGVDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(61)))), ((int)(((byte)(105)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(61)))), ((int)(((byte)(105)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGVDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(61)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(61)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGVDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dGVDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ClmCantidad,
@@ -142,27 +142,27 @@
             this.ClmCategoria,
             this.ClmMonto,
             this.ClmFecha});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(190)))), ((int)(((byte)(205)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGVDatos.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(190)))), ((int)(((byte)(205)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGVDatos.DefaultCellStyle = dataGridViewCellStyle7;
             this.dGVDatos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dGVDatos.EnableHeadersVisualStyles = false;
             this.dGVDatos.Location = new System.Drawing.Point(0, 142);
             this.dGVDatos.Name = "dGVDatos";
             this.dGVDatos.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGVDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGVDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dGVDatos.RowHeadersVisible = false;
             this.dGVDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dGVDatos.Size = new System.Drawing.Size(403, 125);
@@ -203,9 +203,9 @@
             // 
             this.ClmFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.ClmFecha.DataPropertyName = "FechaRegistro";
-            dataGridViewCellStyle2.Format = "d";
-            dataGridViewCellStyle2.NullValue = null;
-            this.ClmFecha.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Format = "d";
+            dataGridViewCellStyle6.NullValue = null;
+            this.ClmFecha.DefaultCellStyle = dataGridViewCellStyle6;
             this.ClmFecha.HeaderText = "Fecha";
             this.ClmFecha.Name = "ClmFecha";
             this.ClmFecha.ReadOnly = true;
@@ -219,10 +219,11 @@
             this.lblHistorial.Name = "lblHistorial";
             this.lblHistorial.Size = new System.Drawing.Size(403, 15);
             this.lblHistorial.TabIndex = 46;
-            this.lblHistorial.Text = "Historial de Productos";
+            this.lblHistorial.Text = "Detalles del Crédito";
             // 
             // pnlTiempo
             // 
+            this.pnlTiempo.Controls.Add(this.pnlCarga);
             this.pnlTiempo.Controls.Add(this.lblFechaLimite);
             this.pnlTiempo.Controls.Add(this.lblFecha);
             this.pnlTiempo.Controls.Add(this.lblMeses);
@@ -288,26 +289,6 @@
             this.pnlInformacion.Name = "pnlInformacion";
             this.pnlInformacion.Size = new System.Drawing.Size(403, 127);
             this.pnlInformacion.TabIndex = 44;
-            // 
-            // pnlCarga
-            // 
-            this.pnlCarga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.pnlCarga.Controls.Add(this.picCarga);
-            this.pnlCarga.Location = new System.Drawing.Point(1, 55);
-            this.pnlCarga.Name = "pnlCarga";
-            this.pnlCarga.Size = new System.Drawing.Size(410, 342);
-            this.pnlCarga.TabIndex = 79;
-            this.pnlCarga.Visible = false;
-            // 
-            // picCarga
-            // 
-            this.picCarga.Image = ((System.Drawing.Image)(resources.GetObject("picCarga.Image")));
-            this.picCarga.Location = new System.Drawing.Point(146, 103);
-            this.picCarga.Name = "picCarga";
-            this.picCarga.Size = new System.Drawing.Size(106, 92);
-            this.picCarga.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picCarga.TabIndex = 0;
-            this.picCarga.TabStop = false;
             // 
             // lblCedula
             // 
@@ -389,13 +370,32 @@
             this.lblCedulaMostrar.Text = "label2";
             this.lblCedulaMostrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // pnlCarga
+            // 
+            this.pnlCarga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            this.pnlCarga.Controls.Add(this.picCarga);
+            this.pnlCarga.Location = new System.Drawing.Point(226, 9);
+            this.pnlCarga.Name = "pnlCarga";
+            this.pnlCarga.Size = new System.Drawing.Size(410, 342);
+            this.pnlCarga.TabIndex = 79;
+            this.pnlCarga.Visible = false;
+            // 
+            // picCarga
+            // 
+            this.picCarga.Image = ((System.Drawing.Image)(resources.GetObject("picCarga.Image")));
+            this.picCarga.Location = new System.Drawing.Point(146, 103);
+            this.picCarga.Name = "picCarga";
+            this.picCarga.Size = new System.Drawing.Size(106, 92);
+            this.picCarga.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picCarga.TabIndex = 0;
+            this.picCarga.TabStop = false;
+            // 
             // DatosConsultaDeuda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(413, 358);
-            this.Controls.Add(this.pnlCarga);
             this.Controls.Add(this.pnlContenedorDatos);
             this.Controls.Add(this.pnlSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
