@@ -128,7 +128,7 @@ namespace Presentacion.View.Forms
             if (dGVDatos.Columns.Count >= 5)
             {
                 dGVDatos.Columns[0].DataPropertyName = "Cantidad";
-                dGVDatos.Columns[1].DataPropertyName = "Producto";
+                dGVDatos.Columns[1].DataPropertyName = "Producto"; //Items
                 dGVDatos.Columns[2].DataPropertyName = "Categoria";
                 dGVDatos.Columns[3].DataPropertyName = "Monto";
                 dGVDatos.Columns[4].DataPropertyName = "Fecha";

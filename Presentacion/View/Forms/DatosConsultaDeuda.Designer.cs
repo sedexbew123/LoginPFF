@@ -29,20 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DatosConsultaDeuda));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.lblDatosDeuda = new System.Windows.Forms.Label();
             this.pnlContenedorDatos = new System.Windows.Forms.Panel();
             this.dGVDatos = new System.Windows.Forms.DataGridView();
-            this.ClmCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClmProductos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClmCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClmMonto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClmFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblHistorial = new System.Windows.Forms.Label();
             this.pnlTiempo = new System.Windows.Forms.Panel();
             this.lblFechaLimite = new System.Windows.Forms.Label();
@@ -58,6 +53,11 @@
             this.lblMonto = new System.Windows.Forms.Label();
             this.lblCreditoMostrar = new System.Windows.Forms.Label();
             this.lblCedulaMostrar = new System.Windows.Forms.Label();
+            this.ClmCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClmProductos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClmCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClmMonto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClmFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlCarga = new System.Windows.Forms.Panel();
             this.picCarga = new System.Windows.Forms.PictureBox();
             this.pnlSuperior.SuspendLayout();
@@ -127,14 +127,14 @@
             this.dGVDatos.BackgroundColor = System.Drawing.Color.White;
             this.dGVDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dGVDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(61)))), ((int)(((byte)(105)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(61)))), ((int)(((byte)(105)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGVDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(61)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(61)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGVDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dGVDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ClmCantidad,
@@ -142,74 +142,31 @@
             this.ClmCategoria,
             this.ClmMonto,
             this.ClmFecha});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(190)))), ((int)(((byte)(205)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGVDatos.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(190)))), ((int)(((byte)(205)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGVDatos.DefaultCellStyle = dataGridViewCellStyle3;
             this.dGVDatos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dGVDatos.EnableHeadersVisualStyles = false;
             this.dGVDatos.Location = new System.Drawing.Point(0, 142);
             this.dGVDatos.Name = "dGVDatos";
             this.dGVDatos.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGVDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGVDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dGVDatos.RowHeadersVisible = false;
             this.dGVDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dGVDatos.Size = new System.Drawing.Size(403, 125);
             this.dGVDatos.TabIndex = 48;
-            // 
-            // ClmCantidad
-            // 
-            this.ClmCantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ClmCantidad.HeaderText = "Cantidad";
-            this.ClmCantidad.Name = "ClmCantidad";
-            this.ClmCantidad.ReadOnly = true;
-            this.ClmCantidad.Width = 87;
-            // 
-            // ClmProductos
-            // 
-            this.ClmProductos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ClmProductos.HeaderText = "Producto";
-            this.ClmProductos.Name = "ClmProductos";
-            this.ClmProductos.ReadOnly = true;
-            // 
-            // ClmCategoria
-            // 
-            this.ClmCategoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ClmCategoria.HeaderText = "Categoría";
-            this.ClmCategoria.Name = "ClmCategoria";
-            this.ClmCategoria.ReadOnly = true;
-            this.ClmCategoria.Width = 91;
-            // 
-            // ClmMonto
-            // 
-            this.ClmMonto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ClmMonto.HeaderText = "Monto";
-            this.ClmMonto.Name = "ClmMonto";
-            this.ClmMonto.ReadOnly = true;
-            this.ClmMonto.Width = 73;
-            // 
-            // ClmFecha
-            // 
-            this.ClmFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ClmFecha.DataPropertyName = "FechaRegistro";
-            dataGridViewCellStyle6.Format = "d";
-            dataGridViewCellStyle6.NullValue = null;
-            this.ClmFecha.DefaultCellStyle = dataGridViewCellStyle6;
-            this.ClmFecha.HeaderText = "Fecha";
-            this.ClmFecha.Name = "ClmFecha";
-            this.ClmFecha.ReadOnly = true;
-            this.ClmFecha.Width = 67;
             // 
             // lblHistorial
             // 
@@ -223,7 +180,6 @@
             // 
             // pnlTiempo
             // 
-            this.pnlTiempo.Controls.Add(this.pnlCarga);
             this.pnlTiempo.Controls.Add(this.lblFechaLimite);
             this.pnlTiempo.Controls.Add(this.lblFecha);
             this.pnlTiempo.Controls.Add(this.lblMeses);
@@ -313,7 +269,7 @@
             // lblNombreMostrar
             // 
             this.lblNombreMostrar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreMostrar.Location = new System.Drawing.Point(71, 16);
+            this.lblNombreMostrar.Location = new System.Drawing.Point(72, 21);
             this.lblNombreMostrar.Name = "lblNombreMostrar";
             this.lblNombreMostrar.Size = new System.Drawing.Size(133, 23);
             this.lblNombreMostrar.TabIndex = 29;
@@ -333,7 +289,7 @@
             // lblApellidoMostrar
             // 
             this.lblApellidoMostrar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellidoMostrar.Location = new System.Drawing.Point(72, 53);
+            this.lblApellidoMostrar.Location = new System.Drawing.Point(72, 55);
             this.lblApellidoMostrar.Name = "lblApellidoMostrar";
             this.lblApellidoMostrar.Size = new System.Drawing.Size(133, 17);
             this.lblApellidoMostrar.TabIndex = 33;
@@ -363,21 +319,65 @@
             // lblCedulaMostrar
             // 
             this.lblCedulaMostrar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCedulaMostrar.Location = new System.Drawing.Point(262, 19);
+            this.lblCedulaMostrar.Location = new System.Drawing.Point(263, 24);
             this.lblCedulaMostrar.Name = "lblCedulaMostrar";
             this.lblCedulaMostrar.Size = new System.Drawing.Size(149, 17);
             this.lblCedulaMostrar.TabIndex = 32;
             this.lblCedulaMostrar.Text = "label2";
             this.lblCedulaMostrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // ClmCantidad
+            // 
+            this.ClmCantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ClmCantidad.HeaderText = "Cantidad";
+            this.ClmCantidad.Name = "ClmCantidad";
+            this.ClmCantidad.ReadOnly = true;
+            this.ClmCantidad.Width = 87;
+            // 
+            // ClmProductos
+            // 
+            this.ClmProductos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ClmProductos.HeaderText = "Item/Concepto";
+            this.ClmProductos.Name = "ClmProductos";
+            this.ClmProductos.ReadOnly = true;
+            this.ClmProductos.Width = 124;
+            // 
+            // ClmCategoria
+            // 
+            this.ClmCategoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ClmCategoria.HeaderText = "Categoría/Tipo";
+            this.ClmCategoria.Name = "ClmCategoria";
+            this.ClmCategoria.ReadOnly = true;
+            this.ClmCategoria.Width = 125;
+            // 
+            // ClmMonto
+            // 
+            this.ClmMonto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ClmMonto.HeaderText = "Monto";
+            this.ClmMonto.Name = "ClmMonto";
+            this.ClmMonto.ReadOnly = true;
+            this.ClmMonto.Width = 73;
+            // 
+            // ClmFecha
+            // 
+            this.ClmFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ClmFecha.DataPropertyName = "FechaRegistro";
+            dataGridViewCellStyle2.Format = "d";
+            dataGridViewCellStyle2.NullValue = null;
+            this.ClmFecha.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ClmFecha.HeaderText = "Fecha";
+            this.ClmFecha.Name = "ClmFecha";
+            this.ClmFecha.ReadOnly = true;
+            this.ClmFecha.Width = 67;
+            // 
             // pnlCarga
             // 
             this.pnlCarga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
             this.pnlCarga.Controls.Add(this.picCarga);
-            this.pnlCarga.Location = new System.Drawing.Point(226, 9);
+            this.pnlCarga.Location = new System.Drawing.Point(1, 62);
             this.pnlCarga.Name = "pnlCarga";
             this.pnlCarga.Size = new System.Drawing.Size(410, 342);
-            this.pnlCarga.TabIndex = 79;
+            this.pnlCarga.TabIndex = 80;
             this.pnlCarga.Visible = false;
             // 
             // picCarga
@@ -396,6 +396,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(413, 358);
+            this.Controls.Add(this.pnlCarga);
             this.Controls.Add(this.pnlContenedorDatos);
             this.Controls.Add(this.pnlSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -426,11 +427,6 @@
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Panel pnlContenedorDatos;
         private System.Windows.Forms.DataGridView dGVDatos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClmCantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClmProductos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClmCategoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClmMonto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClmFecha;
         private System.Windows.Forms.Label lblHistorial;
         private System.Windows.Forms.Panel pnlTiempo;
         private System.Windows.Forms.Label lblMeses;
@@ -444,9 +440,14 @@
         private System.Windows.Forms.Label lblMonto;
         private System.Windows.Forms.Label lblCreditoMostrar;
         private System.Windows.Forms.Label lblCedulaMostrar;
-        private System.Windows.Forms.Panel pnlCarga;
-        private System.Windows.Forms.PictureBox picCarga;
         private System.Windows.Forms.Label lblFechaLimite;
         private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClmCantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClmProductos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClmCategoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClmMonto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClmFecha;
+        private System.Windows.Forms.Panel pnlCarga;
+        private System.Windows.Forms.PictureBox picCarga;
     }
 }
