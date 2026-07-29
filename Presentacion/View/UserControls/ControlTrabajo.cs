@@ -114,7 +114,7 @@ namespace Presentacion.View.UserControls
                 bool estaSeleccionado = (e.State & DataGridViewElementStates.Selected) != 0;
 
                 // Paleta Armónica (Soft Modern Palette) alineada al estándar de CrediTrack
-                if (estado.Equals("Pagado", StringComparison.OrdinalIgnoreCase) || estado.Equals("Solvente", StringComparison.OrdinalIgnoreCase))
+                if (estado.Equals("Pagado", StringComparison.OrdinalIgnoreCase))
                 {
                     colorFondo = estaSeleccionado ? Color.FromArgb(170, 235, 180) : Color.FromArgb(205, 245, 210);
                     colorTexto = Color.DarkGreen;
@@ -124,12 +124,12 @@ namespace Presentacion.View.UserControls
                     colorFondo = estaSeleccionado ? Color.FromArgb(255, 220, 140) : Color.FromArgb(255, 235, 170);
                     colorTexto = Color.FromArgb(133, 100, 4);
                 }
-                else if (estado.Equals("Pendiente", StringComparison.OrdinalIgnoreCase) || estado.Equals("Debe", StringComparison.OrdinalIgnoreCase))
+                else if (estado.Equals("Pendiente", StringComparison.OrdinalIgnoreCase))
                 {
                     colorFondo = estaSeleccionado ? Color.FromArgb(255, 190, 190) : Color.FromArgb(255, 215, 215);
                     colorTexto = Color.DarkRed;
                 }
-                else if (estado.Equals("Vencido", StringComparison.OrdinalIgnoreCase) || estado.Equals("Vencida", StringComparison.OrdinalIgnoreCase))
+                else if (estado.Equals("Vencido", StringComparison.OrdinalIgnoreCase))
                 {
                     // Tono borgoña/vino para alertas de vencimiento
                     colorFondo = estaSeleccionado ? Color.FromArgb(240, 180, 185) : Color.FromArgb(248, 215, 218);
