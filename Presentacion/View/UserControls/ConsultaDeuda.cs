@@ -134,13 +134,10 @@ namespace Presentacion.View.UserControls
 
         private void DGVDatos_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
-            // Validar que sea la columna de WhatsApp y no el encabezado
             if (e.RowIndex >= 0 && dGVDatos.Columns[e.ColumnIndex].Name == "BtnWhatsApp")
             {
-                // 1. Pintar únicamente el fondo de la celda base (limpia cualquier residuo)
                 e.PaintBackground(e.CellBounds, true);
 
-                // 2. Definir dimensiones del botón dentro de la celda
                 int paddingX = 8;
                 int paddingY = 4;
 
@@ -151,33 +148,29 @@ namespace Presentacion.View.UserControls
                     e.CellBounds.Height - (paddingY * 2)
                 );
 
-                // Evitar rectángulos inválidos si la celda es muy pequeña
                 if (rectBoton.Width <= 0 || rectBoton.Height <= 0) return;
 
-                // 3. Colores oficiales de WhatsApp
                 Color colorFondoBoton = Color.FromArgb(37, 211, 102);
-                Color colorTexto = Color.White; // Texto blanco resalta mucho mejor sobre el verde
+                Color colorTexto = Color.White;
 
-                // Efecto visual cuando la fila está seleccionada
                 if ((e.State & DataGridViewElementStates.Selected) != 0)
                 {
                     colorFondoBoton = Color.FromArgb(18, 140, 126);
                 }
 
-                // 4. Radio proporcional a la altura para lograr el efecto cápsula/pastilla perfecto
                 int radioCurvatura = rectBoton.Height / 2;
+
+                // 👇 Guardamos el estado original ANTES de tocarlo
+                SmoothingMode smoothingOriginal = e.Graphics.SmoothingMode;
 
                 using (GraphicsPath path = ObtenerRutaRedondeada(rectBoton, radioCurvatura))
                 using (SolidBrush brushFondo = new SolidBrush(colorFondoBoton))
                 using (SolidBrush brushTexto = new SolidBrush(colorTexto))
                 {
-                    // Calidad de renderizado alta para curvas suaves
                     e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
 
-                    // Dibujar el cuerpo redondeado del botón
                     e.Graphics.FillPath(brushFondo, path);
 
-                    // 5. Dibujar Ícono + Texto centrados
                     Image imgWhatsApp = Properties.Resources.ic_whatsapp;
 
                     int imgWidth = 16;
@@ -213,7 +206,10 @@ namespace Presentacion.View.UserControls
                     );
                 }
 
-                e.Handled = true; // Notificar a WinForms que omitimos el pintado estándar
+                // 👇 Restauramos el estado original DESPUÉS de usarlo
+                e.Graphics.SmoothingMode = smoothingOriginal;
+
+                e.Handled = true;
             }
         }
 

@@ -171,20 +171,17 @@ namespace Presentacion.View.UserControls
                 }
                 else if (estado.Equals("Vencido", StringComparison.OrdinalIgnoreCase) || estado.Equals("Vencida", StringComparison.OrdinalIgnoreCase))
                 {
-                    // Tono rojo borgoña/vino para alertar estado crítico
                     colorFondo = estaSeleccionado ? Color.FromArgb(240, 180, 185) : Color.FromArgb(248, 215, 218);
                     colorTexto = Color.FromArgb(114, 28, 36);
                 }
-                else // Estado desconocido o inactivo por defecto
+                else
                 {
                     colorFondo = estaSeleccionado ? Color.FromArgb(200, 200, 205) : Color.FromArgb(225, 225, 230);
                     colorTexto = Color.FromArgb(39, 39, 42);
                 }
 
-                // 1. Limpiar el fondo base respetando la selección nativa del DataGridView
                 e.PaintBackground(e.CellBounds, true);
 
-                // 2. Definir margenes y geometría de la cápsula
                 int paddingX = 8;
                 int paddingY = 4;
 
@@ -199,7 +196,9 @@ namespace Presentacion.View.UserControls
 
                 int radioCurvatura = rectBadge.Height / 2;
 
-                // 3. Dibujar la cápsula suave y el texto centrado
+                // 👇 Guardamos el SmoothingMode original ANTES de tocarlo
+                SmoothingMode smoothingOriginal = e.Graphics.SmoothingMode;
+
                 using (GraphicsPath path = ObtenerRutaRedondeada(rectBadge, radioCurvatura))
                 using (SolidBrush brushFondo = new SolidBrush(colorFondo))
                 using (SolidBrush brushTexto = new SolidBrush(colorTexto))
@@ -210,17 +209,18 @@ namespace Presentacion.View.UserControls
 
                     e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
 
-                    // Rellenar la pastilla redondeada
                     e.Graphics.FillPath(brushFondo, path);
 
-                    // Texto resaltado en negrita con la tipografía oficial del grid
                     using (Font fontBold = new Font(e.CellStyle.Font, FontStyle.Bold))
                     {
                         e.Graphics.DrawString(estado, fontBold, brushTexto, rectBadge, sf);
                     }
                 }
 
-                e.Handled = true; // Omite el pintado predeterminado de WinForms
+                // 👇 Restauramos el SmoothingMode original DESPUÉS de usarlo
+                e.Graphics.SmoothingMode = smoothingOriginal;
+
+                e.Handled = true;
             }
         }
 

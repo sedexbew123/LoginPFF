@@ -215,6 +215,9 @@ namespace Presentacion.View.UserControls
 
                 int radioCurvatura = rectBadge.Height / 2;
 
+                // 👇 Guardamos el SmoothingMode original ANTES de tocarlo
+                SmoothingMode smoothingOriginal = e.Graphics.SmoothingMode;
+
                 // 3. Dibujar la cápsula suave y el texto centrado
                 using (GraphicsPath path = ObtenerRutaRedondeada(rectBadge, radioCurvatura))
                 using (SolidBrush brushFondo = new SolidBrush(colorFondo))
@@ -235,6 +238,9 @@ namespace Presentacion.View.UserControls
                         e.Graphics.DrawString(textoEstado, fontBold, brushTexto, rectBadge, sf);
                     }
                 }
+
+                // 👇 Restauramos el SmoothingMode original DESPUÉS de usarlo
+                e.Graphics.SmoothingMode = smoothingOriginal;
 
                 e.Handled = true; // Omitir el dibujado nativo
             }

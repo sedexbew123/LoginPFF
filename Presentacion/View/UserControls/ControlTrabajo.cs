@@ -124,12 +124,12 @@ namespace Presentacion.View.UserControls
                     colorFondo = estaSeleccionado ? Color.FromArgb(255, 220, 140) : Color.FromArgb(255, 235, 170);
                     colorTexto = Color.FromArgb(133, 100, 4);
                 }
-                else if (estado.Equals("Pendiente", StringComparison.OrdinalIgnoreCase))
+                else if (estado.Equals("Debe", StringComparison.OrdinalIgnoreCase))
                 {
                     colorFondo = estaSeleccionado ? Color.FromArgb(255, 190, 190) : Color.FromArgb(255, 215, 215);
                     colorTexto = Color.DarkRed;
                 }
-                else if (estado.Equals("Vencido", StringComparison.OrdinalIgnoreCase))
+                else if (estado.Equals("Vencida", StringComparison.OrdinalIgnoreCase))
                 {
                     // Tono borgoña/vino para alertas de vencimiento
                     colorFondo = estaSeleccionado ? Color.FromArgb(240, 180, 185) : Color.FromArgb(248, 215, 218);
@@ -159,6 +159,9 @@ namespace Presentacion.View.UserControls
 
                 int radioCurvatura = rectBadge.Height / 2;
 
+                // 👇 Guardamos el SmoothingMode original ANTES de tocarlo
+                SmoothingMode smoothingOriginal = e.Graphics.SmoothingMode;
+
                 // 3. Dibujado de la cápsula y texto
                 using (GraphicsPath path = ObtenerRutaRedondeada(rectBadge, radioCurvatura))
                 using (SolidBrush brushFondo = new SolidBrush(colorFondo))
@@ -179,6 +182,9 @@ namespace Presentacion.View.UserControls
                         e.Graphics.DrawString(estado, fontBold, brushTexto, rectBadge, sf);
                     }
                 }
+
+                // 👇 Restauramos el SmoothingMode original DESPUÉS de usarlo
+                e.Graphics.SmoothingMode = smoothingOriginal;
 
                 e.Handled = true; // Omitir dibujado básico por defecto
             }

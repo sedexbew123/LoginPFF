@@ -198,6 +198,9 @@ namespace Presentacion.View.UserControls
                 // 3. Radio para la curvatura estilo cápsula
                 int radioCurvatura = rectBadge.Height / 2;
 
+                // 👇 Guardamos el SmoothingMode original ANTES de tocarlo
+                SmoothingMode smoothingOriginal = e.Graphics.SmoothingMode;
+
                 // 4. Dibujar la cápsula y el texto
                 using (GraphicsPath path = ObtenerRutaRedondeada(rectBadge, radioCurvatura))
                 using (SolidBrush brushFondo = new SolidBrush(colorFondo))
@@ -218,6 +221,9 @@ namespace Presentacion.View.UserControls
                         e.Graphics.DrawString(estado, fontBold, brushTexto, rectBadge, sf);
                     }
                 }
+
+                // 👇 Restauramos el SmoothingMode original DESPUÉS de usarlo
+                e.Graphics.SmoothingMode = smoothingOriginal;
 
                 e.Handled = true; // Indicar a WinForms que omitimos el dibujado por defecto
             }
