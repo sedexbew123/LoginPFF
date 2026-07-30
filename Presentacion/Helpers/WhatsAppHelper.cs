@@ -11,6 +11,8 @@ namespace Presentacion.Helpers
         /// </summary>
         /// <param name="numeroTelefono">Número de teléfono con código de país (ej: "584141234567")</param>
         /// <param name="mensaje">Mensaje a enviar</param>
+        /// 
+
         public static void EnviarMensaje(string numeroTelefono, string mensaje)
         {
             if (string.IsNullOrWhiteSpace(numeroTelefono))
@@ -28,30 +30,39 @@ namespace Presentacion.Helpers
                 numeroLimpio = "58" + numeroLimpio;
             }
 
-            // Codificar el texto de forma segura
             string mensajeCodificado = WebUtility.UrlEncode(mensaje);
 
-            // CAMBIO CLAVE: Usamos la URI directa de WhatsApp Desktop
-            string uriNativa = $"whatsapp://send?phone={numeroLimpio}&text={mensajeCodificado}";
+            // 👇 URI del protocolo nativo de la app de escritorio
+            string urlApp = $"whatsapp://send?phone={numeroLimpio}&text={mensajeCodificado}";
 
+            // 👇 URL web de respaldo (WhatsApp Web / landing page)
+            string urlWeb = $"https://api.whatsapp.com/send?phone={numeroLimpio}&text={mensajeCodificado}";
+
+            // 1. Intentar abrir directamente la app de escritorio
+            if (!TryAbrirUrl(urlApp))
+            {
+                // 2. Si la app no está instalada (no hay handler para "whatsapp://"), usar la web
+                TryAbrirUrl(urlWeb);
+            }
+        }
+
+        private static bool TryAbrirUrl(string url)
+        {
             try
             {
-                Process.Start(new ProcessStartInfo
+                using (var proceso = Process.Start(new ProcessStartInfo
                 {
-                    FileName = uriNativa,
+                    FileName = url,
                     UseShellExecute = true
-                });
+                }))
+                {
+                    return proceso != null;
+                }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                // Fallback: Si el equipo del usuario no tiene instalado WhatsApp Desktop,
-                // abrimos la versión Web en el navegador como respaldo.
-                string urlWeb = $"https://wa.me/{numeroLimpio}?text={mensajeCodificado}";
-                Process.Start(new ProcessStartInfo
-                {
-                    FileName = urlWeb,
-                    UseShellExecute = true
-                });
+                System.Diagnostics.Debug.WriteLine($"No se pudo abrir '{url}': {ex.Message}");
+                return false;
             }
         }
 
@@ -60,6 +71,7 @@ namespace Presentacion.Helpers
             return System.Text.RegularExpressions.Regex.Replace(telefono, @"[^\d]", "");
         }
     }
+
 
     public static class PlantillasWhatsApp
     {
