@@ -556,4 +556,4 @@ namespace Datos
         private static void Log(string origen, Exception ex) =>
             System.Diagnostics.Debug.WriteLine($"[D_Servicios.{origen}] {ex.Message}");
     }
-}
+}   
