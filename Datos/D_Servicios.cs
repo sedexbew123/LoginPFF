@@ -20,7 +20,7 @@ namespace Datos
                         t.Nombre,
                         t.Estado,
                         (SELECT COUNT(*) FROM Servicios s WHERE s.IdTipoServicio = t.IdTipoServicio) AS CantidadServicios
-                FROM TiposServicio t
+                FROM TiposServicio t  
                 ORDER BY t.Nombre";
 
             using (SqlConnection conexion = await this.conexion.ConectarAsync())
