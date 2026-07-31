@@ -29,12 +29,14 @@ namespace Presentacion.Presenter
 
         private void ServicioCambiado_Accion(object sender, EventArgs e)
         {
-            
+
         }
 
         private void CreditoCambiado_Accion(object sender, EventArgs e)
         {
             _view.FechaLimiteVisible = _view.DarCredito;
+
+
         }
 
         private void CedulaBusqueda_Accion(object sender, EventArgs e)
