@@ -56,7 +56,7 @@ namespace Presentacion.Presenter
 
         }
 
-        private void SeleccionarTipo_Accion(object sender, EventArgs e)
+        private async Task SeleccionarTipo_Accion()
         {
 
         }

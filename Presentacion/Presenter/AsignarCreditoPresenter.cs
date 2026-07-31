@@ -86,11 +86,8 @@ namespace Presentacion.Presenter
 
             try
             {
-                var (exito, mensaje) = await _logica.AsignarCredito(
-                    _view.Cedula,
-                    _items,
-                    Entidades.SesionUsuario.UsuarioLogueado.Id  
-                );
+                var (exito, mensaje) = await _logica.AsignarCredito(_view.Cedula, _items, 
+                    Entidades.SesionUsuario.UsuarioLogueado.Id, _view.FechaLimite);
 
                 if (exito)
                 {
