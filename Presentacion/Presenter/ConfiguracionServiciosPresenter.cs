@@ -26,9 +26,14 @@ namespace Presentacion.Presenter
            // _ = CargarListado();
         }
 
-       // private object CargarListado()
+        private void SeleccionarTipo_Accion(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        // private object CargarListado()
         //{
-            
+
         //}
 
         private async Task GuardarServicio_Accion()
@@ -52,11 +57,6 @@ namespace Presentacion.Presenter
         }
 
         private async Task EliminarTipo_Accion()
-        {
-
-        }
-
-        private async Task SeleccionarTipo_Accion()
         {
 
         }
